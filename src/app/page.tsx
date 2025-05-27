@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "@/components/ui/backgroundBeams";
-import { ContainerTextFlip } from "@/components/ui/containerTextFlip";
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { FeaturesSection } from "@/components/ui/featureSection";
 import Image from "next/image";
 
-const words = ["a", "b", "c"];
 
 export default function homePage() {
 
