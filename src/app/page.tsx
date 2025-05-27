@@ -4,10 +4,12 @@ import { BackgroundBeams } from "@/components/ui/backgroundBeams";
 import { motion } from "motion/react";
 import { FeaturesSection } from "@/components/ui/featureSection";
 import Image from "next/image";
+import { usePathname } from 'next/navigation';
 
 
 export default function homePage() {
-
+	const pathname = usePathname();
+	const basePath = pathname.startsWith('/arcahome-nextjs') ? '/arcahome-nextjs' : '';
 	return (
 		<div className="px-4 py-10 md:py-20">
 			<Image style={{maskImage: "linear-gradient(rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.564) 87%, transparent 100%);", margin: "auto"}} src="https://arcafin.fr/content/arca-white.png" alt="Arca Logo" width={400} height={400} />
@@ -82,7 +84,7 @@ export default function homePage() {
 			>
 				<div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
 					<Image
-						src="/img/filler.png"
+						src={`${basePath}/img/filler.png`}
 						alt="Landing page preview"
 						className="aspect-[16/9] h-auto w-full object-cover"
 						height={1000}
