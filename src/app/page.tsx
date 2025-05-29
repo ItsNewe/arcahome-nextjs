@@ -122,7 +122,7 @@ export default function homePage() {
 			>
 				<div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
 					<Image
-						src={"/img/filler.png"}
+						src="/img/filler.png"
 						alt="Landing page preview"
 						className="aspect-[16/9] h-auto w-full object-cover"
 						height={1000}
