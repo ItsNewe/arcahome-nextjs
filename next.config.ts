@@ -2,20 +2,15 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'arcafin.fr',
-        pathname: '/content/**',
-      }
-    ],
+    unoptimized: true
   },
-  basePath: isProd ? '/arcahome-nextjs' : '',
-  assetPrefix: isProd ? '/arcahome-nextjs/' : '',
-};
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+}
 
 export default nextConfig;
