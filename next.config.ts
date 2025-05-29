@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
     ],
   },
   basePath: isProd ? '/arcahome-nextjs' : '',
-  assetPrefix: isProd ? '/arcahome-nextjs' : '',
+  assetPrefix: isProd ? '/arcahome-nextjs/' : '',
 };
 
 export default nextConfig;
